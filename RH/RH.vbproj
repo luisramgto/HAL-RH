@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E7BB586-3603-4304-BA0B-D20BDD0C784A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RH.My.MyApplication</StartupObject>
+    <RootNamespace>RH</RootNamespace>
+    <AssemblyName>RH</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>05-RESOURCES\logo_HAL.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Critza.Bibliotecas, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Critza.Bibliotecas.1.0.0\lib\Critza.Bibliotecas.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01-DATOS\conexion.vb" />
+    <Compile Include="01-DATOS\fcandidatos.vb" />
+    <Compile Include="01-DATOS\flogin.vb" />
+    <Compile Include="02-LOGICA\vAplicaSub.vb" />
+    <Compile Include="02-LOGICA\vCalUtilidades.vb" />
+    <Compile Include="02-LOGICA\vClaseRiesgo.vb" />
+    <Compile Include="02-LOGICA\vEdoCivil.vb" />
+    <Compile Include="02-LOGICA\vEntidadFede.vb" />
+    <Compile Include="02-LOGICA\vEscolaridad.vb" />
+    <Compile Include="02-LOGICA\vMotBaja.vb" />
+    <Compile Include="02-LOGICA\vMotivoDescarto.vb" />
+    <Compile Include="02-LOGICA\vSexo.vb" />
+    <Compile Include="02-LOGICA\vStatus.vb" />
+    <Compile Include="02-LOGICA\vCandidatos.vb" />
+    <Compile Include="02-LOGICA\vLogin.vb" />
+    <Compile Include="02-LOGICA\vTipoContrato.vb" />
+    <Compile Include="02-LOGICA\vTipoEmpleado.vb" />
+    <Compile Include="02-LOGICA\vTipoJornada.vb" />
+    <Compile Include="02-LOGICA\vTipoNomina.vb" />
+    <Compile Include="02-LOGICA\vTipoRegimen.vb" />
+    <Compile Include="02-LOGICA\vCamposEmpleado.vb" />
+    <Compile Include="02-LOGICA\vTipoSueldo.vb" />
+    <Compile Include="02-LOGICA\vZona.vb" />
+    <Compile Include="03-PRESENTACION\frmcandidatos_aceptados.Designer.vb">
+      <DependentUpon>frmcandidatos_aceptados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmcandidatos_aceptados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmcandidatos_rechazados.Designer.vb">
+      <DependentUpon>frmcandidatos_rechazados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmcandidatos_rechazados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmcandidatos.Designer.vb">
+      <DependentUpon>frmcandidatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmcandidatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frminicio.Designer.vb">
+      <DependentUpon>frminicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frminicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmlogin.Designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato_aceptados.Designer.vb">
+      <DependentUpon>frmmantecandidato_aceptados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato_aceptados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato_rechazados.Designer.vb">
+      <DependentUpon>frmmantecandidato_rechazados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato_rechazados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato.Designer.vb">
+      <DependentUpon>frmmantecandidato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmmantecandidato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmrangoexport_aceptados.Designer.vb">
+      <DependentUpon>frmrangoexport_aceptados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmrangoexport_aceptados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmrangoexport.Designer.vb">
+      <DependentUpon>frmrangoexport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-PRESENTACION\frmrangoexport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos_aceptados.es-MX.resx">
+      <DependentUpon>frmcandidatos_aceptados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos_aceptados.resx">
+      <DependentUpon>frmcandidatos_aceptados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos_rechazados.es-MX.resx">
+      <DependentUpon>frmcandidatos_rechazados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos_rechazados.resx">
+      <DependentUpon>frmcandidatos_rechazados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos.es-MX.resx">
+      <DependentUpon>frmcandidatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmcandidatos.resx">
+      <DependentUpon>frmcandidatos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frminicio.resx">
+      <DependentUpon>frminicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmmantecandidato_aceptados.resx">
+      <DependentUpon>frmmantecandidato_aceptados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmmantecandidato_rechazados.resx">
+      <DependentUpon>frmmantecandidato_rechazados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmmantecandidato.resx">
+      <DependentUpon>frmmantecandidato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmrangoexport_aceptados.resx">
+      <DependentUpon>frmrangoexport_aceptados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-PRESENTACION\frmrangoexport.resx">
+      <DependentUpon>frmrangoexport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="04-REPORTES\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="05-RESOURCES\arrow-first-icon.png" />
+    <None Include="05-RESOURCES\arrow-previous-icon.png" />
+    <None Include="05-RESOURCES\arrow-next-icon.png" />
+    <None Include="05-RESOURCES\arrow-last-icon.png" />
+    <Content Include="05-RESOURCES\candado.jpg" />
+    <Content Include="05-RESOURCES\logo_HAL.ico" />
+    <None Include="05-RESOURCES\usuario_excluidos.png" />
+    <None Include="05-RESOURCES\usuario_no_excluidos.png" />
+    <None Include="05-RESOURCES\RH_WALLPAPER_HAL.png" />
+    <Content Include="05-RESOURCES\usuario.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
